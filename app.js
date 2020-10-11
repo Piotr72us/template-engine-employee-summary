@@ -29,7 +29,7 @@ const questions = [
     {
         name: "id",
         message: "What is your Manager's ID?",
-        type: "input",
+        type: "input"
         // validate: value => {
         //     var pass = value.match(/^([01]{1})?[-.\s]?\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})\s?((?:#|ext\.?\s?|x\.?\s?){1}(?:\d+)?)?$/i);
         //     if (pass) {return true}
@@ -44,7 +44,7 @@ const questions = [
     {
         name: "officeNumber",
         message: "What is your Manager's office number?",
-        type: "input",
+        type: "input"
     },
     {
         name: "teamMember",
@@ -64,7 +64,7 @@ const questions = [
     {
         name: "id",
         message: "What is your Engineer's ID?",
-        type: "input",
+        type: "input"
         // validate: answer => {
         //     const pass = answer.match(
         //         /^[1-9]\d*$/
@@ -102,7 +102,7 @@ const questions = [
     {
         name: "id",
         message: "What is your Intern's ID?",
-        type: "input",
+        type: "input"
     },
     {
         name: "email",
