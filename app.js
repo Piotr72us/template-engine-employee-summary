@@ -65,20 +65,20 @@ const questions = [
         name: "id",
         message: "What is your Engineer's ID?",
         type: "input",
-        validate: answer => {
-            const pass = answer.match(
-                /^[1-9]\d*$/
-            );
-            if(pass) {
-                if(idArray.includes(answer)) {
-                    return "This ID is already taken."
-                }
-                else {
-                    return true;
-                }
-            }
-            return "Please enter a positive number greater than zero."
-        }
+        // validate: answer => {
+        //     const pass = answer.match(
+        //         /^[1-9]\d*$/
+        //     );
+        //     if(pass) {
+        //         if(idArray.includes(answer)) {
+        //             return "This ID is already taken."
+        //         }
+        //         else {
+        //             return true;
+        //         }
+        //     }
+        //     return "Please enter a positive number greater than zero."
+        // }
     },
     {
         name: "email",
@@ -148,14 +148,14 @@ function chooseTeam() {
         [
             questions[4]
     ]).then(answer => {
-    if(answer.teamMember === "Engineer") {
-        addEngineer();
+        if(answer.teamMember === "Engineer") {
+            addEngineer();
+        }
+        else if (answer.teamMember === "Intern") {
+            addIntern();
+        }
+        else {buildTeam()}
     }
-    else if (answer.teamMember === "Intern") {
-        addIntern();
-    }
-    else {buildTeam()}
-}
     )
         
 }
@@ -194,15 +194,25 @@ function addIntern() {
 
 createManager();
 
-function buildTeam() {
-    console.log(teamMembers);
-    console.log(idArray);
-    console.log("ready to build team")
-}
+
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+function buildTeam() {
+
+        if(!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR)
+        }
+    
+    console.log(teamMembers);
+    console.log(idArray);
+    console.log("ready to build team");
+
+    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+
+}
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
