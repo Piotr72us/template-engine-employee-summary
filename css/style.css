@@ -3,39 +3,6 @@ body {
     margin: 0;
 }
 
-/* .flashy {
-    color: lightgoldenrodyellow;
-} */
-
-/* .testing {
-    background-image: url("/img/off4.jpeg");
-    max-height: 200px;
-    background-size: cover;
-    background-position: center;
-} */
-
-/* .im {
-    height: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-} */
-
-/* .row-first {
-    height:50%;
-    overflow: hidden;
-} */
-
-/* .darky {
-    background: linear-gradient(90deg, black, gray);
-} */
-
-/* .centeredel {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 350px;
-} */
-
 .iconic {
     max-height: 70px;
 }
@@ -55,4 +22,20 @@ body {
 
 .dar {
     background: repeating-linear-gradient(black 40px, rgb(189, 189, 126) 90px);
+}
+
+.mgr {
+    background: linear-gradient(rgb(100, 5, 5), rgb(59, 57, 57));
+}
+
+.eng {
+    background: linear-gradient(rgb(5, 68, 5), rgb(59, 57, 57));
+}
+
+.int {
+    background: linear-gradient(rgb(11, 34, 110), rgb(59, 57, 57));
+}
+
+.employee-card {
+    min-width: 234px;
 }
