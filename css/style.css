@@ -8,11 +8,11 @@ body {
 }
 
 .marg {
-    margin: 20px 20px 50px 20px;
+    margin: 5px 20px 5px 20px;
 }
 
 .parentcont {
-    max-width: 720px;
+    max-width: 480px;
     margin: 0 auto;
 }
 
@@ -38,4 +38,22 @@ body {
 
 .employee-card {
     min-width: 234px;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    padding: 10px;
+    text-align: center;       
 }

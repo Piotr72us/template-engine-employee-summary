@@ -37,40 +37,40 @@ const questions = [
     {
         name: "id",
         message: "What is your Manager's ID?",
-        type: "input"
-        // validate: value =>
-        //     new Promise((resolve) => {
-        //         setTimeout(
-        //             () => resolve(!Number.isNaN(Number(value)) && value.length === 4 || "Your ID has 4 digits"),
-        //                 50
-        //     );
-        // })
+        type: "input",
+        validate: value =>
+            new Promise((resolve) => {
+                setTimeout(
+                    () => resolve(!Number.isNaN(Number(value)) && value.length === 4 || "Your ID has 4 digits"),
+                        50
+            );
+        })
     },
     {
         name: "email",
         message: "What is Manager's email?",
-        type: "input"
-        // validate: answer => {
-        //     const pass = answer.match(
-        //         /\S+@\S+\.\S+/
-        //     );
-        //     if(pass) {
-        //         return true;
-        //     }
-        //     return "Please enter a valid email address";
-        // }
+        type: "input",
+        validate: answer => {
+            const pass = answer.match(
+                /\S+@\S+\.\S+/
+            );
+            if(pass) {
+                return true;
+            }
+            return "Please enter a valid email address";
+        }
     },
     {
         name: "officeNumber",
         message: "What is your Manager's office number?",
-        type: "input"
-        // validate: value =>
-        // new Promise((resolve) => {
-        //     setTimeout(
-        //         () => resolve(!Number.isNaN(Number(value)) && value.length === 3 || "Your Office Number has 3 digits"),
-        //             50
-        //     );
-        // })
+        type: "input",
+        validate: value =>
+        new Promise((resolve) => {
+            setTimeout(
+                () => resolve(!Number.isNaN(Number(value)) && value.length === 3 || "Your Office Number has 3 digits"),
+                    50
+            );
+        })
     },
     {
         name: "teamMember",
@@ -81,98 +81,98 @@ const questions = [
     {
         name: "name",
         message: "What is your Engineer's name?",
-        type: "input"
-        // validate: answer => {
-        //     if (answer !== "") {
-        //         return true;
-        //     }
-        //     return "This field can't be empty";
-        // }
+        type: "input",
+        validate: answer => {
+            if (answer !== "") {
+                return true;
+            }
+            return "This field can't be empty";
+        }
     },
     {
         name: "id",
         message: "What is your Engineer's ID?",
-        type: "input"
-        // validate: value =>
-        // new Promise((resolve) => {
-        //     setTimeout(
-        //         () => resolve(!Number.isNaN(Number(value)) && value.length === 4 && !idArray.includes(value)|| "This ID is incorrect or belongs to someone else. Correct ID has 4 digits"),
-        //             50
-        //     );
-        // })
+        type: "input",
+        validate: value =>
+        new Promise((resolve) => {
+            setTimeout(
+                () => resolve(!Number.isNaN(Number(value)) && value.length === 4 && !idArray.includes(value)|| "This ID is incorrect or belongs to someone else. Correct ID has 4 digits"),
+                    50
+            );
+        })
     },
     {
         name: "email",
         message: "What is Engineer's email?",
-        type: "input"
-        // validate: answer => {
-        //     const pass = answer.match(
-        //         /\S+@\S+\.\S+/
-        //     );
-        //     if(pass) {
-        //         return true;
-        //     }
-        //     return "Please enter a valid email address"
-        // }
+        type: "input",
+        validate: answer => {
+            const pass = answer.match(
+                /\S+@\S+\.\S+/
+            );
+            if(pass) {
+                return true;
+            }
+            return "Please enter a valid email address"
+        }
     },
     {
         name: "github",
         message: "What is your Engineer's github profile?",
-        type: "input"
-        // validate: answer => {
-        //     if (answer !== "") {
-        //         return true;
-        //     }
-        //     return "This field can't be empty";
-        // }
+        type: "input",
+        validate: answer => {
+            if (answer !== "") {
+                return true;
+            }
+            return "This field can't be empty";
+        }
     },
     {
         name: "name",
         message: "What is your Intern's name?",
-        type: "input"
-        // validate: answer => {
-        //     if (answer !== "") {
-        //         return true;
-        //     }
-        //     return "This field can't be empty";
-        // }
+        type: "input",
+        validate: answer => {
+            if (answer !== "") {
+                return true;
+            }
+            return "This field can't be empty";
+        }
     },
     {
         name: "id",
         message: "What is your Intern's ID?",
-        type: "input"
-        // validate: value =>
-        // new Promise((resolve) => {
-        //     setTimeout(
-        //         () => resolve(!Number.isNaN(Number(value)) && value.length === 4 && !idArray.includes(value)|| "This ID is incorrect or belongs to someone else. Correct ID has 4 digits"),
-        //             50
-        //     );
-        // })
+        type: "input",
+        validate: value =>
+        new Promise((resolve) => {
+            setTimeout(
+                () => resolve(!Number.isNaN(Number(value)) && value.length === 4 && !idArray.includes(value)|| "This ID is incorrect or belongs to someone else. Correct ID has 4 digits"),
+                    50
+            );
+        })
     },
     {
         name: "email",
         message: "What is Intern's email?",
-        type: "input"
-        // validate: answer => {
-        //     const pass = answer.match(
-        //         /\S+@\S+\.\S+/
-        //     );
-        //     if (pass) {
-        //         return true;
-        //     }
-        //     return "Please enter a valid email address";
-        // }
+        type: "input",
+        validate: answer => {
+            const pass = answer.match(
+                /\S+@\S+\.\S+/
+            );
+            if (pass) {
+                return true;
+            }
+            return "Please enter a valid email address";
+        }
     },
     {
         name: "school",
         message: "What is your Intern's school?",
-        type: "input"
-        // validate: answer => {
-        //     if (answer !== "") {
-        //         return true;
-        //     }
-        //     return "This field can't be empty";
-        // }
+        type: "input",
+        validate: answer => {
+            if (answer !== "") {
+                return true;
+            }
+            return "This field can't be empty";
+        }
     }
 ]
 
@@ -250,12 +250,10 @@ function addIntern() {
 // new file is created "team.html" with the HTML elements created from user's answers
 // new file is properly encoded using "utf8" so that all answers are properly displayed in the browser
 function buildTeam() {
-
     if(!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR);
     }
     fs.writeFileSync(outputPath, render(teamMembers), "utf8");
-
 }
 
 // Everything begins here! This initiates function in order to create Manager.
